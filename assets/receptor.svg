@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140">
+  <rect x="12" y="18" width="116" height="104" rx="18" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="5"/>
+  <path d="M44 42 C56 28, 84 28, 96 42 L96 90 C84 102, 56 102, 44 90 Z" fill="#ba68c8"/>
+  <circle cx="70" cy="67" r="12" fill="#6a1b9a"/>
+  <text x="30" y="132" font-family="Arial" font-size="15" fill="#4a148c">Receptor</text>
+</svg>

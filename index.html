@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anticholinesterase Drug Mechanism Simulator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="top-bar">
+      <h1>Anticholinesterase Drug Mechanism Simulator</h1>
+      <p id="stepTitle" class="step-title">Step 1: Choose a drug class and begin the simulation.</p>
+      <div class="progress-wrap" aria-label="Simulation progress">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="controls-panel">
+        <label for="drugSelector">Select Drug</label>
+        <select id="drugSelector">
+          <optgroup label="Short acting">
+            <option value="edrophonium">Edrophonium</option>
+          </optgroup>
+          <optgroup label="Medium acting">
+            <option value="neostigmine">Neostigmine</option>
+            <option value="physostigmine">Physostigmine</option>
+            <option value="pyridostigmine">Pyridostigmine</option>
+          </optgroup>
+          <optgroup label="Indirect acting used for Alzheimer’s disease">
+            <option value="tacrine">Tacrine (not used clinically due to ADR profile)</option>
+            <option value="donepezil">Donepezil</option>
+            <option value="galantamine">Galantamine</option>
+            <option value="rivastigmine">Rivastigmine</option>
+          </optgroup>
+          <optgroup label="Indirect acting (irreversible)">
+            <option value="echothiophate">Echothiophate</option>
+            <option value="organophosphates">Organophosphates</option>
+          </optgroup>
+        </select>
+
+        <div class="button-row">
+          <button id="prevBtn" type="button">◀ Previous Step</button>
+          <button id="nextBtn" type="button">Next Step ▶</button>
+          <button id="resetBtn" type="button">Reset</button>
+        </div>
+
+        <div id="drugInfo" class="drug-info"></div>
+      </section>
+
+      <section class="simulation-stage" aria-label="Synaptic simulation">
+        <img class="structure neuron-pre" src="assets/presynaptic-neuron.svg" alt="Presynaptic neuron terminal" />
+        <img class="structure cleft" src="assets/synaptic-cleft.svg" alt="Synaptic cleft" />
+        <img class="structure neuron-post" src="assets/postsynaptic-cell.svg" alt="Postsynaptic membrane" />
+
+        <img id="vesicle" class="element vesicle" src="assets/vesicle-acetylcholine.svg" alt="Vesicle carrying acetylcholine" />
+        <img id="achMolecule" class="element ach" src="assets/acetylcholine-molecule.svg" alt="Acetylcholine molecule" />
+        <img id="enzyme" class="element enzyme" src="assets/acetylcholinesterase-enzyme.svg" alt="Acetylcholinesterase enzyme" />
+        <img id="drugMolecule" class="element drug" src="assets/drug-molecule.svg" alt="Anticholinesterase drug molecule" />
+        <img id="receptor" class="element receptor" src="assets/receptor.svg" alt="Cholinergic receptor" />
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
